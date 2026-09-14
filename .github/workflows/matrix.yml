@@ -8,10 +8,10 @@ jobs:
       matrix:
         os: [ubuntu-latest,windows-latest]
         images: [hello-world, Kavya the great]
-   runs-on: ${{ matrix.os }}
-   steps:
-     - name: Welcome to the docker details
-       run: docker info
+     runs-on: ${{ matrix.os }}
+       steps:
+         - name: Welcome to the docker details
+           run: docker info
 
-     - name: OS details of ${{ matrix.os }}
-       run: docker run ${{ matrix.images }}
+         - name: OS details of ${{ matrix.os }}
+           run: docker run ${{ matrix.images }}
